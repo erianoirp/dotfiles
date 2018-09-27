@@ -1,28 +1,124 @@
-"スキーマを設定
-syntax on
-set t_Co=256
-set background=dark
-"colorschemeはt_Coとbackgroundの下じゃないと効かない
+﻿"===== 表示設定 =====
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_ja.utf-8
+source $VIMRUNTIME/menu.vim
+set guifont=Ricty_Diminished_Discord:h11:cSHIFTJIS
+set columns=128
+set lines=40
+set cmdheight=1
+"set t_Co=256
+"syntax on
 colorscheme hybrid
+set background=dark
+" ツールバーとメニューを非表示
+set guioptions-=T
+set guioptions-=m
+"横スクロールバー表示
+set guioptions+=b
 "行番号を表示
 set number
+set linespace=2
+set cursorline
+set cursorcolumn
+"set ruler
+highlight LineNr guifg=#DDDDDD
+highlight CursorLineNr guifg=#ff7f50
+highlight CursorLine guibg=#333333
+highlight CursorColumn guibg=#333333
+highlight Comment guifg=#777777
+"highlight clear CursorLine
+"highlight clear CursorColumn
+"行を折り返さない
+set nowrap
+"新しい行を挿入する際にインデントを直前にいた行と同じにする
+"set autoindent
+"set smartindent
+set ambiwidth=double
+
+"===== タブ設定 =====
 "タブの代わりにスペースを挿入する
 set expandtab
-"タブをx文字分として表示
+"タブをＸ文字分として表示
 set tabstop=2
-"インデントをx文字分にする
+"インデントを変更する際にＸ文字分ずらす
 set shiftwidth=2
-"行頭のタブもしくはスペースをshiftwidth分だけ挿入、削除する
+"行頭のタブもしくはスペースをshiftwidthの分だけ挿入もしくは削除
 set smarttab
 "不可視文字の可視化
 set list
 set listchars=tab:>-
-"記号を全角分幅を確保する
-set ambiwidth=double
-"改行時に前の行のインデントを継続する
-set autoindent
-"改行時に改行の前の文字に合わせてインデントを増減する
-set smartindent
-set guifont=Ricty_Diminished:h11
-set backupdir=D:/Documents/Vim/Backup
-set undodir=D:/Documents/Vim/Undo
+
+"===== ディレクトリ設定 =====
+"let $HOME=
+set undodir=E:\Documents\Workspace\Temp
+set directory=E:\Documents\Workspace\Temp
+set backupdir=E:\Documents\Workspace\Temp
+
+"===== 補完・置換設定 =====
+"<CR>=改行, <lt>=<
+"空白行のインデントを維持
+"nnoremap o oX<C-h>
+"nnoremap O OX<C-h>
+"inoremap <CR> <CR>X<C-h>
+"inoremap {<Enter> {}<Left><CR><ESC><S-o>
+"inoremap [<Enter> []<Left><CR><ESC><S-o>
+"inoremap (<Enter> ()<Left><CR>ESC><S-o>
+"nnoremap ; :
+"nnoremap <C-l> <C-w>l
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-o> $a
+"nnoremap <C-y> ^i
+"cnoremap gpp !g++ -o 
+"inoremap { {}<Left>
+"inoremap {} {}
+"inoremap [ []<Left>
+"inoremap [] []
+"inoremap ( ()<Left>
+"inoremap () ()
+"inoremap "" ""<Left>
+"inoremap '' ''<Left>
+"inoremap < <lt>><Left>
+"inoremap << <<
+"inoremap /* /**/<Left><Left>
+"inoremap private: private:<ESC><lt><lt>o
+"inoremap protected: protected:<ESC><lt><lt>o
+"inoremap public: public:<ESC><lt><lt>o
+"inoremap <C-l> <Right>
+"inoremap <C-h> <Left>
+
+"===== NeoBundle =====
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
+
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=$VIM/.vim/bundle/neobundle.vim/
+"set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('$VIM/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+NeoBundle 'cohama/lexima.vim'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
