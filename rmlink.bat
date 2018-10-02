@@ -1,3 +1,6 @@
+@chcp 65001
+rm %HOMEPATH%\.bash_profile
+rm %HOMEPATH%\.bashrc
 rm %HOMEPATH%\.vimrc
 rm %HOMEPATH%\_vimrc
 rm %HOMEPATH%\_gvimrc
