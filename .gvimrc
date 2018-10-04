@@ -15,8 +15,6 @@ set guioptions-=T
 set guioptions-=m
 "横スクロールバー表示
 set guioptions+=b
-"行番号を表示
-set number
 set linespace=2
 set cursorline
 set cursorcolumn
