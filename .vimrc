@@ -80,5 +80,7 @@ set ambiwidth=double
 set autoindent
 "改行時に改行の前の文字に合わせてインデントを増減する
 set smartindent
+"行を折り返さない
+set nowrap
 set fenc=utf-8
 set enc=utf-8

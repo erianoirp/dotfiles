@@ -6,10 +6,6 @@ set guifont=Ricty_Diminished_Discord:h11:cSHIFTJIS
 set columns=128
 set lines=40
 set cmdheight=1
-"set t_Co=256
-"syntax on
-colorscheme hybrid
-set background=dark
 " ツールバーとメニューを非表示
 set guioptions-=T
 set guioptions-=m
@@ -26,25 +22,6 @@ highlight CursorColumn guibg=#333333
 highlight Comment guifg=#777777
 "highlight clear CursorLine
 "highlight clear CursorColumn
-"行を折り返さない
-set nowrap
-"新しい行を挿入する際にインデントを直前にいた行と同じにする
-"set autoindent
-"set smartindent
-set ambiwidth=double
-
-"===== タブ設定 =====
-"タブの代わりにスペースを挿入する
-set expandtab
-"タブをＸ文字分として表示
-set tabstop=2
-"インデントを変更する際にＸ文字分ずらす
-set shiftwidth=2
-"行頭のタブもしくはスペースをshiftwidthの分だけ挿入もしくは削除
-set smarttab
-"不可視文字の可視化
-set list
-set listchars=tab:>-
 
 "===== ディレクトリ設定 =====
 "let $HOME=
