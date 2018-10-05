@@ -2,6 +2,8 @@
 source $VIMRUNTIME/delmenu.vim
 set langmenu=ja_ja.utf-8
 source $VIMRUNTIME/menu.vim
+"こちらにも記述しないと適用されない模様
+colorscheme hybrid
 set guifont=Ricty_Diminished_Discord:h11:cSHIFTJIS
 set columns=128
 set lines=40

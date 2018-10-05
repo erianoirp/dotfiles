@@ -59,8 +59,8 @@
 syntax on
 set t_Co=256
 set background=dark
-"colorschemeはt_Coとbackgroundの下じゃないと効かない
 colorscheme hybrid
+"colorschemeはt_Coとbackgroundの下じゃないと効かない
 "行番号を表示
 set number
 "タブの代わりにスペースを挿入する
