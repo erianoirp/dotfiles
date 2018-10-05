@@ -57,7 +57,6 @@
 
 "スキーマを設定
 syntax on
-
 set t_Co=256
 set background=dark
 "colorschemeはt_Coとbackgroundの下じゃないと効かない
