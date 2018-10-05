@@ -1,10 +1,10 @@
 @chcp 65001
-mklink %HOMEPATH%\.bashrc %HOMEPATH%\dotfiles\.bashrc
-mklink %HOMEPATH%\.vimrc %HOMEPATH%\dotfiles\.vimrc
-mklink %HOMEPATH%\_vimrc %HOMEPATH%\dotfiles\.vimrc
-mklink %HOMEPATH%\_gvimrc %HOMEPATH%\dotfiles\.gvimrc
-mkdir %HOMEPATH%\.vim
-mklink /D %HOMEPATH%\.vim\colors %HOMEPATH%\dotfiles\colors
-mkdir %HOMEPATH%\vimfiles
-mklink /D %HOMEPATH%\vimfiles\colors %HOMEPATH%\dotfiles\colors
+mklink %HOME%\.bashrc %HOME%\dotfiles\.bashrc
+mklink %HOME%\.vimrc %HOME%\dotfiles\.vimrc
+mklink %HOME%\_vimrc %HOME%\dotfiles\.vimrc
+mklink %HOME%\_gvimrc %HOME%\dotfiles\.gvimrc
+mkdir %HOME%\.vim\temp
+mklink /D %HOME%\.vim\colors %HOME%\dotfiles\colors
+mkdir %HOME%\vimfiles
+mklink /D %HOME%\vimfiles\colors %HOME%\dotfiles\colors
 @pause

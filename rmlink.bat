@@ -1,8 +1,10 @@
 @chcp 65001
-rm %HOMEPATH%\.bashrc
-rm %HOMEPATH%\.vimrc
-rm %HOMEPATH%\_vimrc
-rm %HOMEPATH%\_gvimrc
-rmdir /s /q %HOMEPATH%\.vim
-rmdir /s /q %HOMEPATH%\vimfiles
+rm %HOME%\.bashrc
+rm %HOME%\.vimrc
+rm %HOME%\_vimrc
+rm %HOME%\_gvimrc
+rmdir %HOME%\.vim\temp
+rmdir %HOME%\.vim\colors
+rmdir %HOME%\.vim
+rmdir /s /q %HOME%\vimfiles
 @pause

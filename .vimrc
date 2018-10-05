@@ -84,3 +84,21 @@ set smartindent
 set nowrap
 set fenc=utf-8
 set enc=utf-8
+set cursorline
+set cursorcolumn
+"===== ディレクトリ設定 =====
+"let $HOME=
+if has("unix")
+  " .un~
+  set undofile
+  set undodir=$HOME/.vim/temp
+  " .swp
+  set directory=$HOME/.vim/temp
+  " .???~
+  set backupdir=$HOME/.vim/temp
+elseif has("win32")
+  set undofile
+  set undodir=%HOME%\.vim\temp
+  set directory=%HOME%\.vim\temp
+  set backupdir=%HOME%\.vim\temp
+endif

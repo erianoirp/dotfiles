@@ -25,12 +25,6 @@ highlight Comment guifg=#777777
 "highlight clear CursorLine
 "highlight clear CursorColumn
 
-"===== ディレクトリ設定 =====
-"let $HOME=
-set undodir=E:\Documents\Workspace\Temp
-set directory=E:\Documents\Workspace\Temp
-set backupdir=E:\Documents\Workspace\Temp
-
 "===== 補完・置換設定 =====
 "<CR>=改行, <lt>=<
 "空白行のインデントを維持
