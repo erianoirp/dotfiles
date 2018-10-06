@@ -87,6 +87,7 @@ set encoding=utf-8
 set fileformat=unix
 set cursorline
 set cursorcolumn
+set hlsearch
 "===== ディレクトリ設定 =====
 "let $HOME=
 if has("unix")
