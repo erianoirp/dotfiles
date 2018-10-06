@@ -82,8 +82,9 @@ set autoindent
 set smartindent
 "行を折り返さない
 set nowrap
-set fenc=utf-8
-set enc=utf-8
+set fileencoding=utf-8
+set encoding=utf-8
+set fileformat=unix
 set cursorline
 set cursorcolumn
 "===== ディレクトリ設定 =====
