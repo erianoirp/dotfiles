@@ -12,9 +12,10 @@ auto_cdls() {
 }
 PROMPT_COMMAND="$PROMPT_COMMAND"$'\n'auto_cdls
 alias ls='ls -F --color=auto --show-control-chars'
-alias ll='ls -lF --color=auto'
-alias la='ls -AF --color=auto'
-alias lla='ls -AlF --color=auto'
+alias ll='ls -l'
+alias la='ls -A'
+alias lla='ls -Al'
+alias lld='ll | grep ^d'
 alias dir='dir --color=auto --show-control-chars'
 alias so='source'
 
