@@ -4,6 +4,7 @@ function wincmd() {
     $CMD $* 2>&1 | iconv -f cp932 -t utf-8
 }
 alias ping='wincmd ping'
+alias ipconfig='wincmd ipconfig'
 auto_cdls() {
   if [ "$OLDPWD" != "$PWD" ]; then
     ls
