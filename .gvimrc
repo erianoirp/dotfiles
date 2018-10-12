@@ -4,7 +4,8 @@ set langmenu=ja_ja.utf-8
 source $VIMRUNTIME/menu.vim
 "こちらにも記述しないと適用されない模様
 colorscheme hybrid
-set guifont=Ricty_Diminished_Discord:h11:cSHIFTJIS
+set guifont=Ricty_Diminished_Discord:h11,Consolas:h11
+set ambiwidth=double
 set columns=128
 set lines=40
 set cmdheight=1
@@ -17,6 +18,8 @@ set linespace=2
 set cursorline
 set cursorcolumn
 "set ruler
+" ステータスバーに情報を表示
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 highlight LineNr guifg=#DDDDDD
 highlight CursorLineNr guifg=#ff7f50
 highlight CursorLine guibg=#333333
