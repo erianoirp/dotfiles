@@ -4,7 +4,8 @@ set langmenu=ja_ja.utf-8
 source $VIMRUNTIME/menu.vim
 "こちらにも記述しないと適用されない模様
 colorscheme hybrid
-set guifont=Ricty_Diminished_Discord:h11,Consolas:h11
+set guifontwide=Myrica_M:h12,Ricty_Diminished_Discord:h11,MS_Gothic:h11
+set guifont=Myrica_M:h12,Ricty_Diminished_Discord:h11,Consolas:h11
 set ambiwidth=double
 set columns=128
 set lines=40
