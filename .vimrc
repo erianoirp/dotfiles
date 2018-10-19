@@ -91,7 +91,7 @@ set smartindent
 set nowrap
 set fileencoding=utf-8
 set encoding=utf-8
-set fileformat=unix
+"set fileformat=unix
 set cursorline
 set cursorcolumn
 set hlsearch
@@ -100,11 +100,11 @@ set hlsearch
 if has("unix")
   " .un~
   set undofile
-  set undodir=$HOME/.vim/temp
+  set undodir=~/.vim/temp
   " .swp
-  set directory=$HOME/.vim/temp
+  set directory=~/.vim/temp
   " .???~
-  set backupdir=$HOME/.vim/temp
+  set backupdir=~/.vim/temp
 elseif has("win32")
   set undofile
   set undodir=%HOME%\.vim\temp
