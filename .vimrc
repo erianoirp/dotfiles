@@ -73,7 +73,7 @@ set number
 "タブの代わりにスペースを挿入する
 set expandtab
 "タブをx文字分として表示
-set tabstop=2
+set tabstop=4
 "インデントをx文字分にする
 set shiftwidth=2
 "行頭のタブもしくはスペースをshiftwidth分だけ挿入、削除する
