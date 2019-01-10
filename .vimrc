@@ -95,6 +95,8 @@ set encoding=utf-8
 set cursorline
 set cursorcolumn
 set hlsearch
+"インデント単位で折りたたむ
+set foldmethod=indent
 "===== ディレクトリ設定 =====
 "let $HOME=
 if has("unix")
