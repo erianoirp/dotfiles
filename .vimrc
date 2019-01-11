@@ -104,6 +104,8 @@ autocmd BufWinEnter ?* silent loadview
 "autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
 " Don't save options.
 set viewoptions-=options
+"1行コメントを改行したときに自動で1行コメントが生成されるのを抑制する
+autocmd FileType * setlocal formatoptions-=ro
 "===== ディレクトリ設定 =====
 "let $HOME=
 if has("unix")
