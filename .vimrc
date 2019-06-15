@@ -106,6 +106,14 @@ autocmd BufWinEnter ?* silent loadview
 set viewoptions-=options
 "1行コメントを改行したときに自動で1行コメントが生成されるのを抑制する
 autocmd FileType * setlocal formatoptions-=ro
+"挿入モード時はライン型点滅カーソル
+let &t_SI.="\e[5 q"
+"通常モード時はブロック型点滅カーソル
+let &t_EI.="\e[1 q"
+
+"===== 補完・置換設定 =====
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+
 "===== ディレクトリ設定 =====
 "let $HOME=
 if has("unix")
