@@ -26,6 +26,8 @@ highlight CursorColumn guibg=#333333
 highlight Comment guifg=#777777
 "highlight clear CursorLine
 "highlight clear CursorColumn
+"文字コードを自動判別し、勝手にcp932に変換されるのを阻止
+set fileencodings=utf-8,sjis,cp932
 
 "===== 補完・置換設定 =====
 "<CR>=改行, <lt>=<
