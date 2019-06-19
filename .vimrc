@@ -89,9 +89,8 @@ set autoindent
 set smartindent
 "行を折り返さない
 set nowrap
-set fileencoding=utf-8
-set encoding=utf-8
-"set fileformat=unix
+"ステータスバーの表示内容を変更
+set statusline=%<%f\ %m%r%h%w[%{&fenc}][%{&ff}]\ (%{strftime(\"%Y/%m/%d\ %H:%M:%S\",getftime(expand(\"%:p\")))})%=%l,%c%V%5P
 set cursorline
 set cursorcolumn
 set hlsearch

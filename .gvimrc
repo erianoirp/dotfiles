@@ -19,8 +19,6 @@ set linespace=2
 set cursorline
 set cursorcolumn
 "set ruler
-" ステータスバーに情報を表示
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 highlight LineNr guifg=#DDDDDD
 highlight CursorLineNr guifg=#ff7f50
 highlight CursorLine guibg=#333333
