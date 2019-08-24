@@ -1,19 +1,19 @@
 ﻿"===== 表示設定 =====
-source $VIMRUNTIME/delmenu.vim
-set langmenu=ja_ja.utf-8
-source $VIMRUNTIME/menu.vim
 "こちらにも記述しないと適用されない模様
 colorscheme hybrid
 set guifontwide=Ricty_Diminished_Discord:h11,Myrica_M:h12,MS_Gothic:h11
 set guifont=Ricty_Diminished_Discord:h11,Myrica_M:h12,Consolas:h11
 set ambiwidth=double
+" ウィンドウの幅を変更
 set columns=128
+" ウィンドウの高さを変更
 set lines=40
 set cmdheight=1
-" ツールバーとメニューを非表示
+" ツールバーを非表示
 set guioptions-=T
+" メニューを非表示
 set guioptions-=m
-"横スクロールバー表示
+" 横スクロールバーを表示
 set guioptions+=b
 set linespace=2
 set cursorline
@@ -26,8 +26,12 @@ highlight CursorColumn guibg=#333333
 highlight Comment guifg=#777777
 "highlight clear CursorLine
 "highlight clear CursorColumn
-"文字コードを自動判別し、勝手にcp932に変換されるのを阻止
-set fileencodings=utf-8,sjis,cp932
+" gvimの文字コードを変更
+set encoding=utf-8
+" encoding=utf-8によるメニューの文字化けを修正
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_ja.utf-8
+source $VIMRUNTIME/menu.vim
 
 "===== 補完・置換設定 =====
 "<CR>=改行, <lt>=<

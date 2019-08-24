@@ -97,10 +97,10 @@ set cursorline
 set cursorcolumn
 set hlsearch
 "インデント単位で折りたたむ
-set foldmethod=indent
+"set foldmethod=indent
 " Save fold settings.
-autocmd BufWinLeave ?* silent mkview
-autocmd BufWinEnter ?* silent loadview
+"autocmd BufWinLeave ?* silent mkview
+"autocmd BufWinEnter ?* silent loadview
 "autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
 "autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
 " Don't save options.
