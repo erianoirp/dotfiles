@@ -92,7 +92,7 @@ set nowrap
 "ステータスバーの表示内容を変更
 set statusline=%<%f\ %m%r%h%w[%{&fenc}][%{&ff}]\ (%{strftime(\"%Y/%m/%d\ %H:%M:%S\",getftime(expand(\"%:p\")))})%=%l,%c%V%5P
 "文字コードを自動判別し、勝手にutf-8に変換されるのを阻止
-set fileencodings=cp932,sjis,utf-8
+set fileencodings=euc-jp,cp932,sjis,utf-8
 set cursorline
 set cursorcolumn
 set hlsearch
