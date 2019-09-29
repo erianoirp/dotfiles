@@ -21,6 +21,8 @@ if dein#load_state('~/.vim/dein')
   "call dein#add('Shougo/neocomplete.vim')
   "call dein#add('tpope/vim-surround')
   call dein#add('junegunn/vim-easy-align')
+  " Git wrapper
+  call dein#add('tpope/vim-fugitive')
 
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
@@ -90,7 +92,7 @@ set smartindent
 "行を折り返さない
 set nowrap
 "ステータスバーの表示内容を変更
-set statusline=%<%f\ %m%r%h%w[%{&fenc}][%{&ff}]\ (%{strftime(\"%Y/%m/%d\ %H:%M:%S\",getftime(expand(\"%:p\")))})%=%l,%c%V%5P
+set statusline=%<%f\ %m%r%h%w[%{&fenc}][%{&ff}]\ (%{strftime(\"%Y/%m/%d\ %H:%M:%S\",getftime(expand(\"%:p\")))})%=%{fugitive#statusline()}\ %l,%c%V%5P
 "文字コードを自動判別し、勝手にutf-8に変換されるのを阻止
 set fileencodings=euc-jp,cp932,sjis,utf-8
 set cursorline
