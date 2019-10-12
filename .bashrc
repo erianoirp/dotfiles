@@ -19,6 +19,8 @@ auto_cdls() {
   fi
 }
 PROMPT_COMMAND="$PROMPT_COMMAND"$'\n'auto_cdls
+alias cp='cp -i'
+alias mv='mv -i'
 alias ls='ls -F --color=auto --show-control-chars'
 alias ll='ls -l'
 alias la='ls -A'
