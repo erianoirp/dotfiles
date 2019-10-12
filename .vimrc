@@ -93,6 +93,9 @@ set smartindent
 set nowrap
 "ステータスバーの表示内容を変更
 set statusline=%<%f\ %m%r%h%w[%{&fenc}][%{&ff}]\ (%{strftime(\"%Y/%m/%d\ %H:%M:%S\",getftime(expand(\"%:p\")))})%=%{fugitive#statusline()}\ %l,%c%V%5P
+" ステータスラインの表示／非表示設定
+" [0]表示しない, [1]ウィンドウが2つ以上の場合に表示, [2]常に表示
+set laststatus=2
 "文字コードを自動判別し、勝手にutf-8に変換されるのを阻止
 set fileencodings=euc-jp,cp932,sjis,utf-8
 set cursorline
@@ -113,6 +116,8 @@ autocmd FileType * setlocal formatoptions-=ro
 let &t_SI.="\e[5 q"
 "通常モード時はブロック型点滅カーソル
 let &t_EI.="\e[1 q"
+" x押下時にレジスタの上書きを抑制 (Black Hole Registerに保存)
+nnoremap x "_x
 
 "===== 補完・置換設定 =====
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
