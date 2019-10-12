@@ -95,15 +95,25 @@ set autoindent
 set smartindent
 "行を折り返さない
 set nowrap
-"ステータスバーの表示内容を変更
-set statusline=%<%f\ %m%r%h%w[%{&fenc}][%{&ff}]\ (%{strftime(\"%Y/%m/%d\ %H:%M:%S\",getftime(expand(\"%:p\")))})%=%{fugitive#statusline()}\ %l,%c%V%5P
+" ハイライト用の色を追加
+" ステータスライン上に表示されるブランチ用
+hi erianoirpGitBranch term=reverse cterm=reverse ctermfg=243 ctermbg=184 gui=bold,reverse
+"ステータスラインの表示内容を変更
+set statusline=%<%f\ %m%r%h%w[%{&fenc}][%{&ff}]\ (%{strftime(\"%Y/%m/%d\ %H:%M:%S\",getftime(expand(\"%:p\")))})
+set statusline+=%=
+set statusline+=%#erianoirpGitBranch#%{fugitive#statusline()}
+set statusline+=%#StatusLine#\ %l,%c%V%5P
 " ステータスラインの表示／非表示設定
 " [0]表示しない, [1]ウィンドウが2つ以上の場合に表示, [2]常に表示
 set laststatus=2
 "文字コードを自動判別し、勝手にutf-8に変換されるのを阻止
 set fileencodings=euc-jp,cp932,sjis,utf-8
+" カーソル行のハイライト
+" [ON]cursorline, [OFF]cursorline
 set cursorline
-set cursorcolumn
+" カーソル列のハイライト
+" [ON]cursorcolumn, [OFF]nocursorcolumn
+set nocursorcolumn
 set hlsearch
 "インデント単位で折りたたむ
 "set foldmethod=indent
