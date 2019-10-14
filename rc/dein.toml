@@ -1,9 +1,12 @@
+# Vim用のプラグインマネージャ
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+# GitコマンドをVim上で実行できるようにする
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+# コメントイン／アウトをショットカットで行えるようにする
 [[plugins]]
 repo = 'tyru/caw.vim'
 
