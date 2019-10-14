@@ -68,6 +68,12 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" caw.vim用の設定 start
+" \+c で行頭にコメントイン／アウト
+nmap <Leader>c <Plug>(caw:zeropos:toggle)
+vmap <Leader>c <Plug>(caw:zeropos:toggle)
+" caw.vim用の設定 end
+
 "スキーマを設定
 syntax on
 set t_Co=256

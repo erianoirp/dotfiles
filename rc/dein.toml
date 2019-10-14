@@ -4,3 +4,6 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+[[plugins]]
+repo = 'tyru/caw.vim'
+
